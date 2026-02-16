@@ -10,7 +10,7 @@ services:
       - mongo_data:/data/db
 
   backend:
-    build: ./backend
+    images: rizwan13/backend:latest
     container_name: node_backend
     ports:
       - 9090:9090
@@ -21,7 +21,7 @@ services:
       - PORT=9090
 
   frontend:
-    build: ./frontend
+    images: rizwan13/frontend:latest
     container_name: angular_frontend
     ports:
       - 8081:80
